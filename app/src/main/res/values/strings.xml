@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">BWS MOBILE</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="title_activity_almoxarifado">Almoxarifado</string>
+    <string name="title_activity_entrega">EntregaActivity</string>
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_almoxarifado"
+    tools:context="br.com.bwsmobile.bwsmobile.AlmoxarifadoActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="16dp"
+        tools:context="br.com.jordilucas.bwsmobile.activity.AlmoxarifadoActivity">
+
+        <Button
+            android:id="@+id/btnFerramentas"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/border_button"
+            android:text="@string/ferramentas"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/btnPatrimonio"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_button"
+            android:text="@string/patrimonio"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/btnEPI"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_button"
+            android:text="@string/epi"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/btnLocacao"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/border_button"
+            android:text="@string/locacao"
+            android:textColor="@color/white"
+            android:textSize="24sp" />
+
+
+        <Button
+            android:id="@+id/btnCadastro"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:background="@drawable/border_button"
+            android:text="@string/cadastro"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:visibility="invisible" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>
