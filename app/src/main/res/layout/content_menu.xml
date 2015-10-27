@@ -22,8 +22,6 @@
         android:padding="16dp"
         tools:context="br.com.jordilucas.bwsmobile.activity.MenuActivity">
 
-
-
         <Button
             android:id="@+id/btnAlmoxarifado"
             android:layout_width="230dp"
