@@ -37,7 +37,7 @@
                 android:value="br.com.bwsmobile.bwsmobile.MenuActivity" />
         </activity>
         <activity
-            android:name=".EntregaActivity"
+            android:name=".EntregaRecebimentoActivity"
             android:label="@string/title_activity_entrega"
             android:parentActivityName=".AlmoxarifadoActivity"
             android:theme="@style/AppTheme.NoActionBar" >

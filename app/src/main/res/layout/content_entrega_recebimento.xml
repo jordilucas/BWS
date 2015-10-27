@@ -8,9 +8,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_entrega"
-    tools:context="br.com.bwsmobile.bwsmobile.EntregaActivity">
+    tools:context="br.com.bwsmobile.bwsmobile.EntregaRecebimentoActivity">
 
-    <?xml version="1.0" encoding="utf-8"?>
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -19,7 +19,7 @@
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_entrega"
-        tools:context="br.com.jordilucas.bwsmobile.activity.EntregaActivity">
+        tools:context="br.com.jordilucas.bwsmobile.activity.EntregaRecebimentoActivity">
 
         <Spinner
             android:id="@+id/listaItens"
@@ -27,9 +27,14 @@
             android:layout_height="50dp"/>
 
 
+
         <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:id="@+id/listView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            />
 
 
     </LinearLayout>
