@@ -20,6 +20,8 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
 
+
+
         almoxarifado = (Button)findViewById(R.id.btnAlmoxarifado);
         manutencao = (Button)findViewById(R.id.btnManutencao);
         abastecimento = (Button)findViewById(R.id.btnAbastecimentos);
@@ -39,7 +41,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     public void onClick(View v){
