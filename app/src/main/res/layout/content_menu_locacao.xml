@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_menu_locacao"
+    tools:context="br.com.bwsmobile.bwsmobile.MenuLocacaoActivity">
+
+    <Button
+        android:id="@+id/btnEntregaLocacao"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/border_button"
+        android:text="@string/btnEntrega"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/btnRecebimentoLocacao"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="@string/btnRecebimento"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/btnLocarLocacao"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="@string/btnLocar"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+    <Button
+        android:id="@+id/btnDevolverLocacao"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/border_button"
+        android:text="@string/btnDevolver"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        />
+
+</LinearLayout>

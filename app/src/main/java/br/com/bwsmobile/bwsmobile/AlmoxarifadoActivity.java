@@ -1,41 +1,52 @@
 package br.com.bwsmobile.bwsmobile;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class AlmoxarifadoActivity extends AppCompatActivity {
+public class AlmoxarifadoActivity extends AppCompatActivity implements View.OnClickListener{
 
-    Button btnAlmoxarifado, btnManutencao, btnAbastecimento, btnUsoFrota, btnCartoes, btnProtocolo;
+    Button ferramentas, epi, patrimonio, locacao;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_almoxarifado);
 
-        btnAlmoxarifado = (Button)findViewById(R.id.btnAlmoxarifado);
-        btnManutencao = (Button)findViewById(R.id.btnManutencao);
-        btnAbastecimento = (Button)findViewById(R.id.btnAbastecimentos);
-        btnUsoFrota = (Button)findViewById(R.id.btnUsoDeFrota);
-        btnCartoes = (Button)findViewById(R.id.btnCartoes);
-        btnProtocolo = (Button)findViewById(R.id.btnProtocolo);
+        ferramentas = (Button)findViewById(R.id.btnFerramentas);
+        patrimonio = (Button)findViewById(R.id.btnPatrimonio);
+        epi = (Button)findViewById(R.id.btnEPI);
+        locacao = (Button)findViewById(R.id.btnLocacao);
+
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+
        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    public void onClick(View v) {
+
+        switch(v.getId()){
+            case R.id.btnFerramentas:
+                Intent i = new Intent(this, MenuEntregaRecebimentoActivity.class);
+                startActivity(i);
+                break;
+
+            case R.id.btnPatrimonio:
+                Intent ii = new Intent(this, MenuEntregaRecebimentoActivity.class);
+                startActivity(ii);
+
+            case R.id.btnEPI:
+                Intent iii = new Intent(this, MenuEntregaRecebimentoActivity.class);
+                startActivity(iii);
+
+
+        }
+    }
 }

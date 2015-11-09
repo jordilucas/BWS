@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btnEntrega">Entrega</string>
+    <string name="btnRecebimento">Recebimento</string>
+    <string name="btnLocar">Locar</string>
+    <string name="btnDevolver">Devolver</string>
+    <string name="hintQuantidade">Informe a quantidade</string>
+    <string name="hintContrato">Contrato</string>
+    <string name="hintValorLocacao">Valor da locação</string>
+</resources>

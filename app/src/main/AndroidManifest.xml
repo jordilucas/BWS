@@ -45,6 +45,29 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.bwsmobile.bwsmobile.AlmoxarifadoActivity" />
         </activity>
+        <activity
+            android:name=".MenuEntregaRecebimentoActivity"
+            android:label="@string/title_activity_menu_entrega_recebimento"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".MenuLocacaoActivity"
+            android:label="@string/title_activity_menu_locacao"
+            android:parentActivityName=".AlmoxarifadoActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.bwsmobile.bwsmobile.AlmoxarifadoActivity" />
+        </activity>
+        <activity
+            android:name=".LocarActivity"
+            android:label="@string/title_activity_locar"
+            android:parentActivityName=".MenuLocacaoActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.bwsmobile.bwsmobile.MenuLocacaoActivity" />
+        </activity>
     </application>
 
 </manifest>

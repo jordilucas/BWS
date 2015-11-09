@@ -4,4 +4,14 @@
     <string name="title_activity_menu">Menu</string>
     <string name="title_activity_almoxarifado">Almoxarifado</string>
     <string name="title_activity_entrega">EntregaActivity</string>
+    <string name="title_activity_menu_entrega_recebimento">MenuEntregaRecebimentoActivity</string>
+    <string name="btnEntrega">Entrega</string>
+    <string name="title_activity_menu_locacao">MenuLocacaoActivity</string>
+    <string name="btnRecebimento">Recebimento</string>
+    <string name="btnLocar">Locar</string>
+    <string name="btnDevolver">Devolver</string>
+    <string name="title_activity_locar">LocarActivity</string>
+    <string name="hintQuantidade">Informe a quantidade</string>
+    <string name="hintContrato">Contrato</string>
+    <string name="hintValorLocacao">Valor da locação</string>
 </resources>
