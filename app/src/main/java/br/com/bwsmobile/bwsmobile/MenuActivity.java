@@ -41,7 +41,7 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
         });
 
 
-        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
     }
 
     public void onClick(View v){

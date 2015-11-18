@@ -7,7 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 
-public class AlmoxarifadoActivity extends AppCompatActivity implements View.OnClickListener{
+public class AlmoxarifadoActivity extends AppCompatActivity {
 
     Button ferramentas, epi, patrimonio, locacao;
 
@@ -26,27 +26,45 @@ public class AlmoxarifadoActivity extends AppCompatActivity implements View.OnCl
         setSupportActionBar(toolbar);
 
 
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-    }
+        ferramentas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-    @Override
-    public void onClick(View v) {
-
-        switch(v.getId()){
-            case R.id.btnFerramentas:
-                Intent i = new Intent(this, MenuEntregaRecebimentoActivity.class);
+                Intent i = new Intent(AlmoxarifadoActivity.this, MenuEntregaRecebimentoActivity.class);
                 startActivity(i);
-                break;
 
-            case R.id.btnPatrimonio:
-                Intent ii = new Intent(this, MenuEntregaRecebimentoActivity.class);
-                startActivity(ii);
-
-            case R.id.btnEPI:
-                Intent iii = new Intent(this, MenuEntregaRecebimentoActivity.class);
-                startActivity(iii);
+            }
+        });
 
 
-        }
+        patrimonio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AlmoxarifadoActivity.this, MenuEntregaRecebimentoActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+        epi.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AlmoxarifadoActivity.this, MenuEntregaRecebimentoActivity.class);
+                startActivity(i);
+            }
+        });
+
+        locacao.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AlmoxarifadoActivity.this, MenuEntregaRecebimentoActivity.class);
+                startActivity(i);
+            }
+        });
+
+
+
     }
+
+
 }

@@ -7,4 +7,6 @@
     <string name="hintQuantidade">Informe a quantidade</string>
     <string name="hintContrato">Contrato</string>
     <string name="hintValorLocacao">Valor da locação</string>
+    <string name="Veículos">Veículos</string>
+    <string name="equipamento">Equipamentos</string>
 </resources>

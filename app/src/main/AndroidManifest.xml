@@ -68,6 +68,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="br.com.bwsmobile.bwsmobile.MenuLocacaoActivity" />
         </activity>
+        <activity
+            android:name=".ManutencaoActivity"
+            android:label="@string/title_activity_manutencao"
+            android:parentActivityName=".MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="br.com.bwsmobile.bwsmobile.MenuActivity" />
+        </activity>
     </application>
 
 </manifest>
