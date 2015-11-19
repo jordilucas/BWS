@@ -32,4 +32,14 @@
     <string name="hintValorLocacao">Valor da locação</string>
     <string name="Veículos">Veículos</string>
     <string name="equipamento">Equipamentos</string>
+    <string name="hint_informar_hodometro">Informe o hodômetro ou Horimetro</string>
+    <string name="hint_informar_tipo_manutencao">Informe o tipo de manutencao</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="btnCancelar">Cancelar</string>
+    <string name="hint_informe_placa">Informe a placa do veículo</string>
+    <string name="hint_informe_marca">Informa a marca do veículo</string>
+    <string name="hint_informe_modelo">Informe o modelo do veículo</string>
+    <string name="hint_informe_cor">Informe a cor do veículo</string>
+    <string name="hint_informe_ano">Informe o ano do veículo</string>
+    <string name="hint_informe_data">Informe a data de entrada do veículo</string>
 </resources>
