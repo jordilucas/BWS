@@ -2,10 +2,10 @@ package br.com.bwsmobile.bwsmobile;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -45,23 +45,14 @@ public class MenuActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void onClick(View v){
-
-        switch(v.getId()){
-
-            case R.id.btnAlmoxarifado:
-                Intent i = new Intent(MenuActivity.this, AlmoxarifadoActivity.class);
-                startActivity(i);
-                Log.i("Botao Almoxarifado", "Clique almoxarifado");
-                break;
-
-            case R.id.btnManutencao:
-                //
-            break;
-
-
+        int id = v.getId();
+        if (id == R.id.btnAlmoxarifado) {
+            Intent i = new Intent(MenuActivity.this, AlmoxarifadoActivity.class);
+            startActivity(i);
+            Log.i("Botao Almoxarifado", "Clique almoxarifado");
+        } else if (id == R.id.btnManutencao) {
+            // manutenção
         }
-
-
     }
 
 
