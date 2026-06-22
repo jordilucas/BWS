@@ -8,7 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:paddingLeft="12dp"
+        android:paddingTop="8dp"
+        android:paddingRight="12dp"
+        android:paddingBottom="8dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -22,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textColor="@color/puzzle_text_dark"
-                android:textSize="28sp"
+                android:textSize="22sp"
                 android:textStyle="bold" />
 
             <TextView
@@ -30,12 +33,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/puzzle_score_bg"
-                android:paddingLeft="16dp"
-                android:paddingTop="8dp"
-                android:paddingRight="16dp"
-                android:paddingBottom="8dp"
-                android:textColor="@color/white"
-                android:textSize="20sp"
+                android:paddingLeft="12dp"
+                android:paddingTop="6dp"
+                android:paddingRight="12dp"
+                android:paddingBottom="6dp"
+                android:textColor="@color/puzzle_text_dark"
+                android:textSize="16sp"
                 android:textStyle="bold" />
         </LinearLayout>
 
@@ -43,75 +46,76 @@
             android:id="@+id/difficultyText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="2dp"
             android:textColor="@color/puzzle_text_light"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <TextView
             android:id="@+id/instructionText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="4dp"
             android:gravity="center"
             android:textColor="@color/puzzle_text_dark"
-            android:textSize="18sp" />
+            android:textSize="15sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
             android:gravity="center"
             android:orientation="horizontal">
 
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_marginRight="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/puzzle_button_bg"
+                android:text="@string/puzzle_btn_reset"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnHint"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:background="@drawable/puzzle_button_secondary_bg"
+                android:text="@string/puzzle_btn_hint"
+                android:textColor="@color/puzzle_text_dark"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_weight="1">
+
             <br.com.bwsmobile.bwsmobile.game.PuzzleGridView
                 android:id="@+id/puzzleGrid"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:layout_margin="8dp" />
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="vertical"
-                android:paddingLeft="16dp">
-
-                <Button
-                    android:id="@+id/btnReset"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="12dp"
-                    android:background="@drawable/puzzle_button_bg"
-                    android:text="@string/puzzle_btn_reset"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:id="@+id/btnHint"
-                    android:layout_width="140dp"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/puzzle_button_secondary_bg"
-                    android:text="@string/puzzle_btn_hint"
-                    android:textColor="@color/puzzle_text_dark"
-                    android:textSize="16sp" />
-            </LinearLayout>
-        </LinearLayout>
+                android:layout_gravity="center" />
+        </FrameLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:paddingBottom="4dp"
+            android:paddingBottom="2dp"
             android:text="@string/puzzle_palette_label"
             android:textColor="@color/puzzle_text_dark"
-            android:textSize="18sp"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
         <br.com.bwsmobile.bwsmobile.game.PuzzlePaletteView
             android:id="@+id/puzzlePalette"
             android:layout_width="match_parent"
-            android:layout_height="120dp"
+            android:layout_height="@dimen/puzzle_palette_height"
             android:background="@drawable/puzzle_palette_bg" />
 
     </LinearLayout>

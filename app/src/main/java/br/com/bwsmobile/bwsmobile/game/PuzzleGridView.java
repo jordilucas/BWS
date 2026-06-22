@@ -29,7 +29,6 @@ public class PuzzleGridView extends View {
 
     private final Paint cellPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint borderPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
-    private final Paint hintPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
     private final Paint lockedPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 
     private float cellSize;
@@ -155,11 +154,30 @@ public class PuzzleGridView extends View {
         return locked != null && isValidCell(row, col) && locked[row][col];
     }
 
+    private void updateGridMetrics() {
+        if (getWidth() <= 0 || getHeight() <= 0) {
+            return;
+        }
+
+        float gridSize = Math.min(getWidth(), getHeight());
+        float padding = gridSize * 0.02f;
+        float available = gridSize - padding * 2;
+        cellSize = available / GRID_SIZE;
+        gridOffsetX = (getWidth() - gridSize) / 2f + padding;
+        gridOffsetY = (getHeight() - gridSize) / 2f + padding;
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+        updateGridMetrics();
+    }
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        int size = Math.min(MeasureSpec.getSize(widthMeasureSpec),
-                MeasureSpec.getSize(heightMeasureSpec));
-        setMeasuredDimension(size, size);
+        int width = MeasureSpec.getSize(widthMeasureSpec);
+        int height = MeasureSpec.getSize(heightMeasureSpec);
+        setMeasuredDimension(width, height);
     }
 
     @Override
@@ -170,19 +188,18 @@ public class PuzzleGridView extends View {
             return;
         }
 
-        float padding = getWidth() * 0.04f;
-        float available = getWidth() - padding * 2;
-        cellSize = available / GRID_SIZE;
-        gridOffsetX = padding;
-        gridOffsetY = padding;
+        updateGridMetrics();
 
         int[][] target = level.getTarget();
+        float cornerRadius = Math.max(8f, cellSize * 0.18f);
 
         for (int row = 0; row < GRID_SIZE; row++) {
             for (int col = 0; col < GRID_SIZE; col++) {
                 float left = gridOffsetX + col * cellSize;
                 float top = gridOffsetY + row * cellSize;
-                RectF rect = new RectF(left + 3, top + 3, left + cellSize - 3, top + cellSize - 3);
+                float inset = Math.max(2f, cellSize * 0.06f);
+                RectF rect = new RectF(left + inset, top + inset,
+                        left + cellSize - inset, top + cellSize - inset);
 
                 int targetColor = target[row][col];
 
@@ -198,12 +215,12 @@ public class PuzzleGridView extends View {
                 }
 
                 cellPaint.setStyle(Paint.Style.FILL);
-                canvas.drawRoundRect(rect, 12f, 12f, cellPaint);
+                canvas.drawRoundRect(rect, cornerRadius, cornerRadius, cellPaint);
 
                 if (locked[row][col]) {
-                    canvas.drawRoundRect(rect, 12f, 12f, lockedPaint);
+                    canvas.drawRoundRect(rect, cornerRadius, cornerRadius, lockedPaint);
                 } else {
-                    canvas.drawRoundRect(rect, 12f, 12f, borderPaint);
+                    canvas.drawRoundRect(rect, cornerRadius, cornerRadius, borderPaint);
                 }
             }
         }
@@ -211,6 +228,7 @@ public class PuzzleGridView extends View {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        updateGridMetrics();
         if (event.getAction() == MotionEvent.ACTION_UP && listener != null) {
             int col = (int) ((event.getX() - gridOffsetX) / cellSize);
             int row = (int) ((event.getY() - gridOffsetY) / cellSize);
@@ -222,6 +240,7 @@ public class PuzzleGridView extends View {
     }
 
     public int[] getCellAt(float x, float y) {
+        updateGridMetrics();
         int col = (int) ((x - gridOffsetX) / cellSize);
         int row = (int) ((y - gridOffsetY) / cellSize);
         if (isValidCell(row, col)) {
