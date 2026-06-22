@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="puzzle_palette_height">96dp</dimen>
+    <dimen name="puzzle_palette_height">80dp</dimen>
 </resources>

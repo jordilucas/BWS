@@ -160,7 +160,7 @@ public class PuzzleGridView extends View {
         }
 
         float gridSize = Math.min(getWidth(), getHeight());
-        float padding = gridSize * 0.02f;
+        float padding = Math.max(1f, gridSize * 0.005f);
         float available = gridSize - padding * 2;
         cellSize = available / GRID_SIZE;
         gridOffsetX = (getWidth() - gridSize) / 2f + padding;
@@ -197,7 +197,7 @@ public class PuzzleGridView extends View {
             for (int col = 0; col < GRID_SIZE; col++) {
                 float left = gridOffsetX + col * cellSize;
                 float top = gridOffsetY + row * cellSize;
-                float inset = Math.max(2f, cellSize * 0.06f);
+                float inset = Math.max(1f, cellSize * 0.04f);
                 RectF rect = new RectF(left + inset, top + inset,
                         left + cellSize - inset, top + cellSize - inset);
 

@@ -11,7 +11,7 @@
             android:name=".game.DesenhoPuzzleActivity"
             android:exported="true"
             android:label="@string/title_activity_desenho_puzzle"
-            android:screenOrientation="sensorLandscape"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
