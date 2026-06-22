@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.core.content.ContextCompat;
+
 import br.com.bwsmobile.bwsmobile.R;
 
 public class PuzzleGridView extends View {
@@ -52,11 +54,11 @@ public class PuzzleGridView extends View {
     private void init() {
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setStrokeWidth(4f);
-        borderPaint.setColor(getResources().getColor(R.color.puzzle_grid_border));
+        borderPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_grid_border));
 
         lockedPaint.setStyle(Paint.Style.STROKE);
         lockedPaint.setStrokeWidth(6f);
-        lockedPaint.setColor(getResources().getColor(R.color.puzzle_locked_border));
+        lockedPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_locked_border));
     }
 
     public void setListener(GridListener listener) {
@@ -185,14 +187,14 @@ public class PuzzleGridView extends View {
                 int targetColor = target[row][col];
 
                 if (targetColor == PuzzleLevel.COLOR_EMPTY) {
-                    cellPaint.setColor(getResources().getColor(R.color.puzzle_cell_empty));
+                    cellPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_cell_empty));
                 } else if (level.isShowHint() && !locked[row][col]
                         && placed[row][col] == PuzzleLevel.COLOR_EMPTY) {
                     cellPaint.setColor(PuzzleColorUtils.getHintColorForId(getContext(), targetColor));
                 } else if (placed[row][col] != PuzzleLevel.COLOR_EMPTY) {
                     cellPaint.setColor(PuzzleColorUtils.getColorForId(getContext(), placed[row][col]));
                 } else {
-                    cellPaint.setColor(getResources().getColor(R.color.puzzle_cell_target));
+                    cellPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_cell_target));
                 }
 
                 cellPaint.setStyle(Paint.Style.FILL);

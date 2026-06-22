@@ -8,6 +8,8 @@ import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
 
+import androidx.core.content.ContextCompat;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -57,13 +59,13 @@ public class PuzzlePaletteView extends View {
     private void init() {
         borderPaint.setStyle(Paint.Style.STROKE);
         borderPaint.setStrokeWidth(4f);
-        borderPaint.setColor(getResources().getColor(R.color.puzzle_grid_border));
+        borderPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_grid_border));
 
-        textPaint.setColor(getResources().getColor(R.color.puzzle_text_dark));
+        textPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_text_dark));
         textPaint.setTextAlign(Paint.Align.CENTER);
         textPaint.setFakeBoldText(true);
 
-        disabledPaint.setColor(getResources().getColor(R.color.puzzle_cell_empty));
+        disabledPaint.setColor(ContextCompat.getColor(getContext(), R.color.puzzle_cell_empty));
         disabledPaint.setStyle(Paint.Style.FILL);
     }
 

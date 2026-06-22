@@ -3,6 +3,8 @@ package br.com.bwsmobile.bwsmobile.game;
 import android.content.Context;
 import android.graphics.Color;
 
+import androidx.core.content.ContextCompat;
+
 import br.com.bwsmobile.bwsmobile.R;
 
 public class PuzzleColorUtils {
@@ -13,19 +15,19 @@ public class PuzzleColorUtils {
     public static int getColorForId(Context context, int colorId) {
         switch (colorId) {
             case 1:
-                return context.getResources().getColor(R.color.puzzle_red);
+                return ContextCompat.getColor(context, R.color.puzzle_red);
             case 2:
-                return context.getResources().getColor(R.color.puzzle_yellow);
+                return ContextCompat.getColor(context, R.color.puzzle_yellow);
             case 3:
-                return context.getResources().getColor(R.color.puzzle_blue);
+                return ContextCompat.getColor(context, R.color.puzzle_blue);
             case 4:
-                return context.getResources().getColor(R.color.puzzle_green);
+                return ContextCompat.getColor(context, R.color.puzzle_green);
             case 5:
-                return context.getResources().getColor(R.color.puzzle_orange);
+                return ContextCompat.getColor(context, R.color.puzzle_orange);
             case 6:
-                return context.getResources().getColor(R.color.puzzle_purple);
+                return ContextCompat.getColor(context, R.color.puzzle_purple);
             case 7:
-                return context.getResources().getColor(R.color.puzzle_pink);
+                return ContextCompat.getColor(context, R.color.puzzle_pink);
             default:
                 return Color.TRANSPARENT;
         }

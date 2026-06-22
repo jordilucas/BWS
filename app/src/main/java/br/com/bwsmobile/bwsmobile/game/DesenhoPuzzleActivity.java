@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import android.view.View;
 import android.view.animation.BounceInterpolator;
 import android.widget.Button;
@@ -20,6 +21,7 @@ public class DesenhoPuzzleActivity extends AppCompatActivity implements
 
     private static final String PREFS_NAME = "desenho_puzzle_prefs";
     private static final String KEY_LEVEL = "current_level";
+    private static final String KEY_SCORE = "score";
 
     private PuzzleLevelRepository repository;
     private int currentLevelIndex;
@@ -44,7 +46,6 @@ public class DesenhoPuzzleActivity extends AppCompatActivity implements
         setContentView(R.layout.activity_desenho_puzzle);
 
         repository = new PuzzleLevelRepository();
-        currentLevelIndex = loadProgress();
 
         gridView = (PuzzleGridView) findViewById(R.id.puzzleGrid);
         paletteView = (PuzzlePaletteView) findViewById(R.id.puzzlePalette);
@@ -56,6 +57,11 @@ public class DesenhoPuzzleActivity extends AppCompatActivity implements
         btnReset = (Button) findViewById(R.id.btnReset);
         btnHint = (Button) findViewById(R.id.btnHint);
         celebrationOverlay = findViewById(R.id.celebrationOverlay);
+
+        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
+        score = prefs.getInt(KEY_SCORE, 0);
+        currentLevelIndex = prefs.getInt(KEY_LEVEL, 0);
+        scoreText.setText(getString(R.string.puzzle_score, score));
 
         gridView.setListener(this);
         paletteView.setListener(this);
@@ -149,7 +155,7 @@ public class DesenhoPuzzleActivity extends AppCompatActivity implements
         GradientDrawable drawable = new GradientDrawable();
         drawable.setCornerRadius(16f);
         drawable.setColor(PuzzleColorUtils.getColorForId(this, colorId));
-        drawable.setStroke(3, getResources().getColor(R.color.puzzle_grid_border));
+        drawable.setStroke(3, ContextCompat.getColor(this, R.color.puzzle_grid_border));
         floatingPiece.setBackground(drawable);
     }
 
@@ -248,14 +254,7 @@ public class DesenhoPuzzleActivity extends AppCompatActivity implements
         SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         prefs.edit()
                 .putInt(KEY_LEVEL, currentLevelIndex)
-                .putInt("score", score)
+                .putInt(KEY_SCORE, score)
                 .apply();
-    }
-
-    private int loadProgress() {
-        SharedPreferences prefs = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
-        score = prefs.getInt("score", 0);
-        scoreText.setText(getString(R.string.puzzle_score, score));
-        return prefs.getInt(KEY_LEVEL, 0);
     }
 }
