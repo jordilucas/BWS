@@ -30,4 +30,20 @@
     <string name="hint_informe_cor">Informe a cor do veículo</string>
     <string name="hint_informe_ano">Informe o ano do veículo</string>
     <string name="hint_informe_data">Informe a data de entrada do veículo</string>
+
+    <!-- Jogo infantil - Desenho Puzzle -->
+    <string name="title_activity_desenho_puzzle">Desenho Mágico</string>
+    <string name="puzzle_level_title">Nível %1$d: %2$s %3$s</string>
+    <string name="puzzle_difficulty">Dificuldade: %1$d estrelas</string>
+    <string name="puzzle_score">Pontos: %1$d</string>
+    <string name="puzzle_instruction_easy">Arraste as peças coloridas para completar o desenho!</string>
+    <string name="puzzle_instruction_hard">Sem dicas! Monte o desenho com as peças certas.</string>
+    <string name="puzzle_palette_label">Peças</string>
+    <string name="puzzle_btn_reset">Recomeçar</string>
+    <string name="puzzle_btn_hint">Dica</string>
+    <string name="puzzle_btn_next">Próximo nível</string>
+    <string name="puzzle_wrong_color">Ops! Essa cor não vai aí. Tente outra!</string>
+    <string name="puzzle_level_complete">Parabéns! Você fez o %1$s %2$s!</string>
+    <string name="puzzle_all_complete">Você completou todos os níveis! 🏆</string>
+    <string name="puzzle_hint_message">Olhe as cores clarinhas no tabuleiro — elas mostram onde cada peça vai!</string>
 </resources>

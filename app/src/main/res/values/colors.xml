@@ -6,4 +6,24 @@
     <color name="colorButtonLogin">#fdfcfd</color>
     <color name="white">#FFFFFF</color>
 
+    <!-- Cores do jogo infantil -->
+    <color name="puzzle_background">#FFF8E7</color>
+    <color name="puzzle_primary">#FF6B9D</color>
+    <color name="puzzle_secondary">#4ECDC4</color>
+    <color name="puzzle_accent">#FFE66D</color>
+    <color name="puzzle_red">#FF5252</color>
+    <color name="puzzle_yellow">#FFEB3B</color>
+    <color name="puzzle_blue">#42A5F5</color>
+    <color name="puzzle_green">#66BB6A</color>
+    <color name="puzzle_orange">#FFA726</color>
+    <color name="puzzle_purple">#AB47BC</color>
+    <color name="puzzle_pink">#F48FB1</color>
+    <color name="puzzle_grid_border">#BDBDBD</color>
+    <color name="puzzle_cell_empty">#F5F5F5</color>
+    <color name="puzzle_cell_target">#E8EAF6</color>
+    <color name="puzzle_locked_border">#FFFFFF</color>
+    <color name="puzzle_palette_bg">#FFFFFF</color>
+    <color name="puzzle_text_dark">#37474F</color>
+    <color name="puzzle_text_light">#78909C</color>
+
 </resources>
